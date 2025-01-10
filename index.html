@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <script>
-    window.myDataLayer = window.myDataLayer || {};
+    document.addEventListener('DOMContentLoaded', () => {
+            window.myDataLayer = window.myDataLayer || {};
  
-    window.myDataLayer.page = {
-        pageInfo: {
-            pageName : document.title,
-            pageURL : window.location.href,
-            pagePath : window.location.pathname
-        }
-    };
+            window.myDataLayer.page = {
+                pageInfo: {
+                    pageName : document.title,
+                    pageURL : window.location.href,
+                    pagePath : window.location.pathname
+                }
+            };
+            console.log(window.myDataLayer);
+        });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
